@@ -1,0 +1,90 @@
+/* CSS styles for the page layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Blue accent */
+.container {
+  border-top: 5px solid #007bff;
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.left-container,
+.right-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.left-container {
+  margin-right: 20px;
+}
+
+.video-container {
+  margin-bottom: 20px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.scroll-box {
+  max-height: 240px;
+  /* Adjust height as needed */
+  overflow-y: auto;
+  /* Enable vertical scroll */
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.summary-box {
+  max-height: 425px;
+}
+
+.transcript-box {
+  max-height: 495px;
+}
+
+/* Orange accent */
+h3 {
+  color: #ff8f00;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.transcript-box .recruiter {
+  color: #007bff;
+  /* Blue color for recruiter label */
+}
+
+.transcript-box .candidate {
+  color: #ff8f00;
+  /* Orange color for candidate label */
+}
