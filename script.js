@@ -1,6 +1,6 @@
 const interviewData = {
   "transcript": {
-    "Barack": [
+    "Recruiter": [
       "Okay. You ready?",
       "Let's get started. Awesome. So today's case is a fun one, and I decided that I wanted to localize it for you. So the case is called Texas Unemployment Bump, and I’ll read you out the intro right now. Our client is the great state of Texas, the only state in the US that has its own state-shaped waffle makers. Texas is the second largest state in the US by population, with 29 million residents in 2019. Moreover, despite the traditionally high growth rates of job availability in Texas, the state did not escape the COVID effect on unemployment. After a peak of 13.5% unemployment, which was how many of the workforce filed for unemployment in April 2020, the rate remained still high in September 2020 at 8.5%. So with this, dare I say it, unprecedented spike in unemployment rates, there has been a similar increase in unemployment insurance fraud, which occurs when people mislead or lie when filing a claim to ensure they have a higher level of benefits than they would otherwise be entitled to. The Texas Workforce Commission has hired us to look to reduce fraud instances and improve fraud capture. How would you think about it, and what would you recommend?",
       "Okay. So we're looking in my neck of the woods here. I’m going to go ahead and replay what I heard just to make sure that I captured the important details. So our client is the state of Texas, more specifically the Texas Workforce Commission. The state has 29 million residents.\n We have this situation where job availability peaked at 13.5% unemployment in April, and it still remains pretty high in September at 8.5%. What this has led to is increasing unemployment insurance fraud. Unemployment insurance fraud is where folks are asking for higher benefits or claiming higher benefits than they're actually entitled to. Our client has asked us to do two things: to reduce the number of fraud instances and also to increase the rate at which we identify fraud. Did I get all of that correctly?",
@@ -96,7 +96,7 @@ const interviewData = {
       "And then what is the thing that we are, you know, how are we operating, what is our company.",
       "And then renaming them I think could be effective in all those situations."
     ],
-    "Joe": [
+    "Candidate": [
       "Yeah, let's do it.",
       "Okay, just getting down to this last detail.",
       "Yes. The only thing I just want to make sure I clarify is the percentage that you said for the September unemployment rate. What did you say again?",
@@ -244,7 +244,7 @@ const interviewData = {
       "Suggested implementing incentives for accurate reporting and increasing penalties and awareness of fraud consequences."
     ],
     "Conclusion": [
-      "Barrack praised Joe's attitude and focus but noted areas for improvement:",
+      "Barack praised Joe's attitude and focus but noted areas for improvement:",
       "- More incisive initial questions.",
       "- A more detailed and confident structure.",
       "- Better note-taking and mini-structuring during the case.",
@@ -323,9 +323,9 @@ const transcriptSubheadings = Object.keys(interviewData.transcript);
 
 // Determine recruiter and candidate names dynamically
 transcriptSubheadings.forEach(subheading => {
-  if (!recruiterName && subheading.toLowerCase().includes("barack")) {
+  if (!recruiterName && subheading.toLowerCase().includes("recruiter")) {
     recruiterName = subheading;
-  } else if (!candidateName && subheading.toLowerCase().includes("joe")) {
+  } else if (!candidateName && subheading.toLowerCase().includes("candidate")) {
     candidateName = subheading;
   }
 });
@@ -355,8 +355,6 @@ if (recruiterName && candidateName) {
   }
 
   // Now you can use recruiterName and candidateName for further processing
-  console.log("Recruiter:", recruiterName);
-  console.log("Candidate:", candidateName);
 } else {
   console.error("Recruiter or candidate name not found in transcript data.");
 }
